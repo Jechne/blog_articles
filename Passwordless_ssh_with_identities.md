@@ -33,8 +33,13 @@ Now you can connect with
 
 ssh host_name 
 
-YEEEEY!!!
-
+So, block any other types of authentication
+vim /etc/ssh/sshd_config
+ChallengeResponseAuthentication no
+PasswordAuthentication no
+UsePAM no
+and restart service
+service ssh restart
 Sources:
 [[1]](https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-digitalocean-droplets), 
 [[2]](http://www.cyberciti.biz/faq/create-ssh-config-file-on-linux-unix/), 
