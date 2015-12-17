@@ -1,0 +1,9 @@
+Create database:
+CREATE DATABASE <db_name>;
+Create user:
+CREATE USER '<user_name>'@'*' IDENTIFIED BY '<user_pass>';
+Grant him privileges
+GRANT ALL PRIVILEGES ON <db_name> . * TO '<user_name>'@'*';
+FLUSH PRIVILEGES;
+
+This user will be now able to log in to database only from localhost. If you want connect remotely, i suggest use SSH tunel
